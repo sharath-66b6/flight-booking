@@ -42,7 +42,7 @@ const AddAirline = () => {
 
       // Send data to backend API
       const response = await axios.post(
-        `${import.meta.env.BACKEND_URL}/api/v1/flights/addAirline`,
+        `${import.meta.env.BACKEND_URL}api/v1/flights/addAirline`,
         airlineData
       );
 
