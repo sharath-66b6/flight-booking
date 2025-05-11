@@ -80,7 +80,8 @@ app.use("/api/v1/flights", flightRoute);
 app.use("/api/v1/bookings", bookingRoute);
 app.use("/api/v1/tickets", ticketRoute);
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
   connectDB();
-  console.log("Server is running on port 5000");
+  console.log("Server is running on http://localhost:${PORT}");
 });

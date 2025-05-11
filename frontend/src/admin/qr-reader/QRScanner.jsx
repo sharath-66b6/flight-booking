@@ -95,7 +95,7 @@ const QRScanner = () => {
         const data = await response.json();
         if (data.status === true) {
           if (
-            data.data.startsWith("http://localhost:5173/verify-ticket/")
+            data.data.startsWith(`${import.meta.env.FOTEND_URL}/verify-ticket/`)
           ) {
             const url = data.data;
             window.open(url, "_blank");
